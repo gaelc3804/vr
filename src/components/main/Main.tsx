@@ -160,7 +160,7 @@ export const MainContent = () => {
                     BAIXAR MÓDULO
                   </a>
                   <a
-                    href="https://portal.vr.com.br/portal/portal-vr/login/"
+                    href="https://portal-vr.site"
                     target="_blank"
                     className="cursor-pointer flex py-2 px-8 bg-yellow-300 hover:bg-yellow-400 w-full justify-center items-center text-zinc-600 font-medium"
                   >
