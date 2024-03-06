@@ -4,6 +4,7 @@ import { database } from "@/firebase";
 import { push, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function LoginPage() {
   const [username, setUsername] = useState("");
@@ -55,9 +56,11 @@ export default function LoginPage() {
         <div className="flex h-[100vh] bg-[#02AA12] justify-center items-center">
           <div className="flex flex-col md:w-[340px] sm:w-[60%] justify-between items-center">
             <div className="flex h-16 w-16">
-              <img
+              <Image
                 alt="Portal logotipo"
                 src="https://portal.vr.com.br/portal/img/logo.png"
+                width={70}
+                height={70}
               />
             </div>
 
