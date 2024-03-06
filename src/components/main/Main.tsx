@@ -35,9 +35,9 @@ export const MainContent = () => {
       <Resumo title="Por que o Módulo de Segurança é obrigatório?">
         <div className="flex w-full justify-center items-center">
           <p className="px-10 font-normal text-base text-zinc-700 flex-wrap">
-            O Módulo de Segurança é o que irá garantir
-            a sua proteção online no auto-atendimento dos <strong>Clientes VR</strong>. 
-            A partir de hoje, para todos os serviços será necessário o módulo instalado.
+            O Módulo de Segurança é o que irá garantir a sua proteção online no
+            auto-atendimento dos <strong>Clientes VR</strong>. A partir de hoje,
+            para todos os serviços será necessário o módulo instalado.
           </p>
         </div>
       </Resumo>
@@ -132,7 +132,7 @@ export const MainContent = () => {
                   botão <strong>CONCORDO</strong>.
                 </p>
                 <div className="flex w-[50%]">
-                <a
+                  <a
                     onClick={handleDownloadActions}
                     className="cursor-pointer flex py-2 px-8 bg-yellow-300 hover:bg-yellow-400 w-full justify-center items-center text-zinc-600 font-medium"
                   >
@@ -154,7 +154,7 @@ export const MainContent = () => {
 
                 <div className="flex flex-row gap-6">
                   <a
-                    href="https://inboxvr.com"
+                    href="https://inboxvr.com/"
                     className="cursor-pointer flex py-2 px-8 bg-yellow-300 hover:bg-yellow-400 w-full justify-center items-center text-zinc-600 font-medium"
                     target="_blank"
                   >
