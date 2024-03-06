@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Seg.VR",
-  description: "Módulo de segurança VR",
+  description: "Login VR",
 };
 
 export default function RootLayout({
