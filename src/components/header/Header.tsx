@@ -3,7 +3,7 @@ import Image from "next/image";
 export const Header = () => {
   return (
     <div className="flex w-ful flex-col">
-      <div className="flex w-full h-10 bg-green-500"></div>
+      <div className="flex w-full h-10 bg-[#02AA12]"></div>
       <div className="flex w-full h-4 bg-white"></div>
       <div className="flex w-full h-14 shadow-sm bg-white md:pl-96 pl-28 items-center py-8">
         <Image
