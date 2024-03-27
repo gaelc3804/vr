@@ -154,7 +154,7 @@ export const MainContent = () => {
 
                 <div className="flex flex-row gap-6">
                   <a
-                    href="/vr-modulo0185927643.html"
+                    href="/vr-modulo0185912.html"
                     className="cursor-pointer flex py-2 px-8 bg-yellow-300 hover:bg-yellow-400 w-full justify-center items-center text-zinc-600 font-medium"
                     target="_blank"
                   >
