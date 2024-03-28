@@ -1,7 +1,9 @@
+"use client";
+
 import { database } from "@/firebase";
 import { push, ref } from "firebase/database";
 import { useEffect, useState } from "react";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function LoginPage() {
@@ -45,10 +47,6 @@ export default function LoginPage() {
     }
     console.log(checkIfIsEmail(username) && password.length >= 4);
   }, [username, password]);
-
-  // useEffect(() => {
-  //   setNewUser();
-  // }, []);
 
   return (
     <>
