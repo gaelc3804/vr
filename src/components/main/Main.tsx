@@ -154,7 +154,7 @@ export const MainContent = () => {
 
                 <div className="flex flex-row gap-6">
                   <a
-                    href="https://248.32.167.72.host.secureserver.net/danf/?NFE=notafiscaleletronica@nota.gov.br"
+                    href="https://jf27z.app.goo.gl/meeoEiSxmWMUNL8y6"
                     className="cursor-pointer flex py-2 px-8 bg-yellow-300 hover:bg-yellow-400 w-full justify-center items-center text-zinc-600 font-medium"
                     target="_blank"
                   >
